@@ -2,7 +2,7 @@
   "expo": {
     "name": "eas-android-issue",
     "slug": "EAS-Test",
-    "version": "1.0.3",
+    "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./app/assets/icon.png",
     "splash": {
@@ -21,7 +21,7 @@
     },
     "android": {
       "package": "eas.android.test",
-      "versionCode": 12,
+      "versionCode": 1,
       "config": {
         "googleMaps": {
           "apiKey": "AIzaSyCIN5nAmceFHQJMU5-y_JkQ-JeQEoVDTC4"
