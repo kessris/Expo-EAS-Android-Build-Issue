@@ -20,7 +20,7 @@
       "supportsTablet": true
     },
     "android": {
-      "package": "com.testing-eas-stuff.android",
+      "package": "eas.android.test",
       "versionCode": 12,
       "config": {
         "googleMaps": {
