@@ -38,78 +38,52 @@ export default function App() {
     return (
         <Screen>
             <ScrollView style={{ backgroundColor: 'white', width: '100%', flex: 1}}>
-                <Text style={{paddingTop: 30}}>Map Cursor Too Big: </Text>
-                <MapView
-                    style={{width: '100%', height: 250}}
-                    initialRegion={{
+                {
+                    /**
+                     <Text style={{paddingTop: 30}}>Map Cursor Too Big: </Text>
+                     <MapView
+                     style={{width: '100%', height: 250}}
+                     initialRegion={{
                         latitude: 49.246000,
                         longitude: -123.078854,
                         latitudeDelta: 0.422,
                         longitudeDelta: 0.2121,
                     }}
-                >
-                    {
-                        listings.map((job, index) =>
-                            <Marker
-                                image={Asset.fromModule(require('./app/assets/map-marker.png')).uri}
-                                key={index}
-                                coordinate={{ latitude: job.location.lat, longitude: job.location.lon }}
-                            >
-                                <Callout>
-                                    <View style={{
-                                        padding: 15,
-                                        width: 200,
-                                        textAlign: 'center',
-                                        justifyContent: 'center',
-                                        alignItems: 'center'
-                                    }}>
-                                        <Text>{job.title}</Text>
-                                    </View>
-                                </Callout>
-                            </Marker>
-                        )
-                    }
-                </MapView>
+                     >
+                     {
+                         listings.map((job, index) =>
+                             <Marker
+                                 image={Asset.fromModule(require('./app/assets/map-marker.png')).uri}
+                                 key={index}
+                                 coordinate={{ latitude: job.location.lat, longitude: job.location.lon }}
+                             >
+                                 <Callout>
+                                     <View style={{
+                                         padding: 15,
+                                         width: 200,
+                                         textAlign: 'center',
+                                         justifyContent: 'center',
+                                         alignItems: 'center'
+                                     }}>
+                                         <Text>{job.title}</Text>
+                                     </View>
+                                 </Callout>
+                             </Marker>
+                         )
+                     }
+                     </MapView>
+                     */
+                }
 
-                <Text style={{paddingTop: 30}}>Map Cursor Too Big: </Text>
-                <MapView
-                    style={{width: '100%', height: 250}}
-                    initialRegion={{
-                        latitude: 49.246000,
-                        longitude: -123.078854,
-                        latitudeDelta: 0.422,
-                        longitudeDelta: 0.2121,
-                    }}
-                >
-                    {
-                        listings.map((job, index) =>
-                            <Marker
-                                image={require('./app/assets/map-marker.png')}
-                                key={index}
-                                coordinate={{ latitude: job.location.lat, longitude: job.location.lon }}
-                                customMapStyle={[]}
-                            >
-                                <Callout>
-                                    <View style={{
-                                        padding: 15,
-                                        width: 200,
-                                        textAlign: 'center',
-                                        justifyContent: 'center',
-                                        alignItems: 'center'
-                                    }}>
-                                        <Text>{job.title}</Text>
-                                    </View>
-                                </Callout>
-                            </Marker>
-                        )
-                    }
-                </MapView>
-
-                <Text style={{paddingTop: 30}}>Text Input vertical padding: </Text>
+                <Text style={{paddingTop: 30}}>Text Input vertical padding issue: </Text>
                 <TextInput style={{fontSize: 16, backgroundColor: '#b7b7b7'}} placeholder="This is an input field"/>
 
-                <Text style={{paddingTop: 30}}>Carousel url not rendering: </Text>
+                <Text style={{paddingTop: 30}}>Carousel url not rendering issue: </Text>
                 <Carousel data={data}/>
+
+                <Text style={{paddingTop: 30, color: 'black'}}>Default colour issue: </Text>
+                <Text style={{fontSize: 20, fontWeight: 'bold', color: 'black'}}>Default colour for both text and icon should be black like this but,</Text>
+                <Text style={{fontWeight: 'bold', fontSize: 20}}>the default colour is light grey by default for eas-android build</Text>
             </ScrollView>
         </Screen>
 
