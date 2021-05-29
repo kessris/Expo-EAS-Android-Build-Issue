@@ -21,7 +21,7 @@
     },
     "android": {
       "package": "eas.android.test",
-      "versionCode": 1,
+      "versionCode": 2,
       "config": {
         "googleMaps": {
           "apiKey": "AIzaSyCIN5nAmceFHQJMU5-y_JkQ-JeQEoVDTC4"
